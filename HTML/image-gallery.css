@@ -1,0 +1,56 @@
+/* General Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+
+/* Image Gallery Grid */
+
+.gallery {
+    display: grid;
+    gap: 15px;
+    padding: 10px;
+}
+
+
+/* Default: Single Column for Mobile */
+
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* Hover Effect */
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Tablet: Two Columns */
+
+@media (min-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Desktop: Three Columns */
+
+@media (min-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
